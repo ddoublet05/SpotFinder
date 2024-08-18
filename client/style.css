@@ -1,0 +1,304 @@
+:root {
+    --red: #ff0000;
+    --blue: #003366;
+    --white: #fff;
+    --black: #000;
+
+    color-scheme: light dark;
+    color: #000;
+    background-color: #fff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+    min-height: 80vh;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 100;
+    text-decoration: none;
+}
+
+#burger {
+    display: block;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--blue);
+    gap: 2rem;
+}
+
+.overlay li {
+    list-style-type: none;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: var(--white);
+    padding: 1rem;
+    transition: 0.2s ease-in-out color;
+}
+
+.overlay a:hover, .overlay a:focus-visible {
+    color: var(--red);
+}
+
+header {
+    margin: 0;
+    padding: 0 2rem;
+    background-color: var(--blue);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: none;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav img {
+    height: 6rem;
+}
+
+nav ul a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: 0.2s ease-in-out color;
+}
+
+nav ul a:hover, nav ul a:focus-visible {
+    color: var(--red);
+}
+
+.famous {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.famous ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+}
+
+.famous li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px #000;
+    background-color: #fff;
+    color: #000;
+    width: 60vw;
+}
+
+.famous li > img {
+    order: -1;
+    width: 100%;
+    height: 30vh;
+}
+
+.famous a {
+    text-decoration: none;
+    padding: 1rem;
+    color: var(--black);
+    font-weight: bold;
+    transition: 0.2s ease-in-out color;
+}
+
+.famous a:hover, .famous a:focus-visible {
+    color: var(--red);
+}
+
+iframe {
+    height: 100vh;
+}
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.filter select {
+    width: fit-content;
+}
+
+.parkingdiv {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.parkingtitel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.parkingtitel img {
+    height: 3rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#downloadForm {
+    align-self: center;
+}
+
+#downloadForm div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#downloadForm label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+.field-error {
+    color: var(--red);
+    font-weight: normal;
+    font-size: smaller;
+}
+
+#downloadForm input, #downloadForm select {
+    background-color: inherit;
+    height: 1.4rem;
+    border: 1px solid var(--black);
+    color: var(--black);
+}
+
+#downloadForm button {
+    margin-top: 3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--blue);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    max-width: 100vw;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.socials img {
+    height: 40px;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 3rem;
+        margin: 0;
+    }
+
+    #burger {
+        display: none;
+        align-items: center;
+    }
+
+    .famous ul {
+        flex-direction: row;
+        width: 80vw;
+    }
+
+    #downloadForm {
+        max-width: 650px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color: var(--white);
+        background-color: #2f2f2f;
+    }
+
+    #downloadForm input {
+        color: var(--white);
+    }
+
+    #downloadForm select {
+        color: var(--white);
+    }
+
+    #downloadForm select option{
+        color: var(--white);
+        background-color: #2f2f2f;
+    }
+}

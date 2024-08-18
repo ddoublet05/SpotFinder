@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/burger.js"></script>
+    <title>Map</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./"><img src="/logo.png" alt="logo fietser"></a>
+        <a href="#map" class="skip-link">.</a>
+        <button type="button" id="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+            </svg>
+        </button>
+        <ul>
+            <li><a href="./map">Map</a></li>
+            <li><a href="./lijst">Lijst</a></li>
+            <li><a href="./review">Review</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <ul class="overlay">
+        <li><a href="./map">Map</a></li>
+        <li><a href="./lijst">Lijst</a></li>
+        <li><a href="./review">Review</a></li>
+    </ul>
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d19910.465486220757!2d3.7149333670662195!3d51.05216404524548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparking!5e0!3m2!1snl!2sbe!4v1723459826772!5m2!1snl!2sbe"
+            style="border:0;" allowfullscreen="" loading="eager" title="Google Maps kaart van Gent"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+</main>
+<footer>
+    <p>&copy; Dylan Doublet, Technologiecampus Odisee Gent</p>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/stadsbestuurgent" target="_blank"><img src="/fb.svg"
+                                                                                     alt="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/stadgent/" target="_blank"><img src="/insta.svg" alt="Instagram"></a>
+        </li>
+        <li><a href="https://data.stad.gent/explore/dataset/bezetting-parkeergarages-real-time/table/?sort=-occupation"
+               target="_blank"><img src="/gent.svg"
+                                    alt="gent stad"></a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

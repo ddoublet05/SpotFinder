@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/form.js"></script>
+    <script type="module" src="/burger.js"></script>
+    <title>Review</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./"><img src="/logo.png" alt="logo fietser"></a>
+        <a href="#downloadForm" class="skip-link">.</a>
+        <button type="button" id="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+            </svg>
+        </button>
+        <ul>
+            <li><a href="./map">Map</a></li>
+            <li><a href="./lijst">Lijst</a></li>
+            <li><a href="./review">Review</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <ul class="overlay">
+        <li><a href="./map">Map</a></li>
+        <li><a href="./lijst">Lijst</a></li>
+        <li><a href="./review">Review</a></li>
+    </ul>
+    <form id="downloadForm" novalidate="">
+        <h2>Review jouw favoriete parking</h2>
+        <p>Laat je mede parkeerders weten welke parking het echt waard is!</p>
+        <div>
+            <label for="name">
+                <span class="field-label">Naam</span>
+            </label>
+            <input type="text" name="name" id="name" autocomplete="given-name" required>
+        </div>
+        <div>
+            <label for="firstname">
+                <span class="field-label">Voornaam</span>
+            </label>
+            <input type="text" name="firstname" id="firstname" autocomplete="family-name" required>
+        </div>
+        <div>
+            <label for="parking">
+                <span class="field-label">Parking</span>
+            </label>
+            <select name="parking" id="parking" required>
+                <option value="">-</option>
+                <option value="Sint-Michiels">Sint-Michiels</option>
+                <option value="Savaanstraat">Savaanstraat</option>
+                <option value="Ramen">Ramen</option>
+                <option value="Tolhuis">Tolhuis</option>
+                <option value="B-Park Gent Sint-Pieters">B-Park Gent Sint-Pieters</option>
+                <option value="Reep">Reep</option>
+                <option value="Sint-Pietersplein">Sint-Pietersplein</option>
+                <option value="Getouw">Getouw</option>
+                <option value="Dok noord">Dok noord</option>
+                <option value="Vrijdagmarkt">Vrijdagmarkt</option>
+                <option value="Ledeberg">Ledeberg</option>
+                <option value="The Loop">The Loop</option>
+                <option value="B-Park Dampoort">B-Park Dampoort</option>
+            </select>
+        </div>
+        <div>
+            <label for="review">
+                <span class="field-label">Review op 5:</span>
+            </label>
+            <select name="review" id="review" required>
+                <option value="">-</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Verzenden</button>
+        </div>
+    </form>
+</main>
+<footer>
+    <p>&copy; Dylan Doublet, Technologiecampus Odisee Gent</p>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/stadsbestuurgent" target="_blank"><img src="/fb.svg"
+                                                                                     alt="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/stadgent/" target="_blank"><img src="/insta.svg" alt="Instagram"></a>
+        </li>
+        <li><a href="https://data.stad.gent/explore/dataset/bezetting-parkeergarages-real-time/table/?sort=-occupation"
+               target="_blank"><img src="/gent.svg"
+                                    alt="gent stad"></a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

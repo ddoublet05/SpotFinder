@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="/burger.js"></script>
+    <title>Home</title>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="./"><img src="/logo.png" alt="logo fietser"></a>
+        <a href="#famous" class="skip-link">.</a>
+        <button type="button" id="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50">
+                <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+            </svg>
+        </button>
+        <ul>
+            <li><a href="./map">Map</a></li>
+            <li><a href="./lijst">Lijst</a></li>
+            <li><a href="./review">Review</a></li>
+        </ul>
+    </nav>
+</header>
+<main class="container">
+    <ul class="overlay">
+        <li><a href="./map">Map</a></li>
+        <li><a href="./lijst">Lijst</a></li>
+        <li><a href="./review">Review</a></li>
+    </ul>
+    <div class="famous">
+        <h2>Bekendste parkings in Gent</h2>
+        <ul>
+            <li><a id="link1" href="/lijst">Sint-Michiels</a><img src="/Parking-SM-1.jpg"
+                                                                               alt="Sint-Michiels parking"></li>
+            <li><a id="link2" href="/lijst">Sint-Pieters</a><img src="/sint-pieters.jpg"
+                                                                              alt="Sint-pieters parking"></li>
+            <li><a id="link3" href="/lijst">Vrijdagmarkt</a><img src="/vrijdagmarkt.jpg"
+                                                                              alt="Vrijdagmarkt parking"></li>
+        </ul>
+    </div>
+</main>
+<footer>
+    <p>&copy; Dylan Doublet, Technologiecampus Odisee Gent</p>
+    <ul class="socials">
+        <li><a href="https://www.facebook.com/stadsbestuurgent" target="_blank"><img src="/fb.svg"
+                                                                                     alt="Facebook"></a></li>
+        <li><a href="https://www.instagram.com/stadgent/" target="_blank"><img src="/insta.svg" alt="Instagram"></a>
+        </li>
+        <li><a href="https://data.stad.gent/explore/dataset/bezetting-parkeergarages-real-time/table/?sort=-occupation"
+               target="_blank"><img src="/gent.svg"
+                                    alt="gent stad"></a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>
