@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-app.use('https://data.stad.gent/api/explore/v2.1/catalog/datasets/bezetting-parkeergarages-real-time/records?limit=13', router);
+app.use('/api/explore/v2.1/catalog/datasets/bezetting-parkeergarages-real-time/records', router);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

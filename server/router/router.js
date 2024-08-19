@@ -3,7 +3,7 @@ import {sendInfo} from '../controller/contactdb.js';
 
 const router = express.Router();
 
-router.route('/')
+router.post('/')
     .post(sendInfo);
 
 export default router;
