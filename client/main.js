@@ -1,4 +1,5 @@
 const parkingdiv = document.querySelectorAll(".parkinginfo");
+const parkingdivs = document.querySelectorAll(".parkingdiv");
 const titel = document.querySelectorAll(".parkingtitel > h3");
 const filterSelect = document.querySelector('#filter');
 
@@ -14,12 +15,12 @@ fetch('https://data.stad.gent/api/explore/v2.1/catalog/datasets/bezetting-parkee
             titel[i].textContent = data.results[i].name;
 
             const p1 = document.createElement('p');
+            p1.className = 'p1'
             const type1 = data.results[i].type;
             p1.textContent = `Type: ${type1}`;
             parkingdiv[i].appendChild(p1);
 
             const p2 = document.createElement('p');
-            p2.className = 'p2';
             const cap1 = data.results[i].availablecapacity;
             p2.textContent = `Beschikbare plaatsen: ${cap1}`;
             parkingdiv[i].appendChild(p2);
@@ -32,16 +33,17 @@ fetch('https://data.stad.gent/api/explore/v2.1/catalog/datasets/bezetting-parkee
         }
 
         filterSelect.addEventListener('change', () => {
-            for (let i = 0; i < parkingdiv.length; i++) {
-                console.log('hello');
-                if (filterSelect.value === 'Toon alles') {
-                    parkingdiv[i].style.display = 'block';
+            console.log('hello');
+            for (let i = 0; i < parkingdivs.length; i++) {
+                if (filterSelect.value === 'all') {
+                    parkingdivs[i].style.display = 'block';
                 } else {
-                    const parkingType = parkingdiv[i].querySelector('.p2');
-                    if (parkingType.textContent.includes(filterSelect.value)) {
-                        parkingdiv[i].style.display = 'block';
+                    const parkingType = document.querySelectorAll('.p1');
+                    console.log(parkingType[i].textContent);
+                    if (parkingType[i].textContent.includes(filterSelect.value)) {
+                        parkingdivs[i].style.display = 'block';
                     } else {
-                        parkingdiv[i].style.display = 'none';
+                        parkingdivs[i].style.display = 'none';
                     }
                 }
             }
